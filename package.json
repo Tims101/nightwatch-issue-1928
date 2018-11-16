@@ -1,0 +1,19 @@
+{
+  "name": "nightwatch-bugreport",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "chromedriver": "^2.43.1",
+    "nightwatch": "0.9.21",
+    "serve": "^10.1.1",
+    "serve-handler": "^5.0.7",
+    "webdriver-manager": "^12.1.0"
+  },
+  "scripts": {
+    "server": "node server.js",
+    "driver": "webdriver-manager update && ./node_modules/webdriver-manager/selenium/chromedriver_2.43 --port=4444 --url-base=wd/hub",
+    "start": "run-p server driver",
+    "test": "nightwatch"
+  }
+}
