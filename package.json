@@ -12,7 +12,7 @@
   },
   "scripts": {
     "server": "node server.js",
-    "driver": "webdriver-manager update && ./node_modules/webdriver-manager/selenium/chromedriver_2.43 --port=4444 --url-base=wd/hub",
+    "driver": "webdriver-manager update --versions.chrome 2.43 && ./node_modules/webdriver-manager/selenium/chromedriver_2.43 --port=4444 --url-base=wd/hub",
     "start": "run-p server driver",
     "test": "nightwatch"
   }
